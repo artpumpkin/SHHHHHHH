@@ -6,7 +6,7 @@ module.exports = {
   cooldown: 3,
   usage: 'donate',
   examples: ['donate'],
-  description: "Show the donation's informations.",
+  description: 'Show the donation\'s information.',
   async execute(message) {
     const messageEmbed = embedMessage(message);
     messageEmbed.setDescription(
