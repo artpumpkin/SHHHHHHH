@@ -23,6 +23,6 @@ module.exports = {
     if (gifUrl) {
       return message.channel.send(gifUrl);
     }
-    return message.channel.send(`No gif found with the name of \`${gifUrl}\``);
+    return message.channel.send(`No gif found with the name of \`${args.join` `}\`.`);
   },
 };
