@@ -15,9 +15,9 @@ module.exports = {
     if (args.length === 0) {
       const docs = await Grant.find();
       const grants = docs.map(
-        ({ userID, commands }) => `**${userID}** is granted ${commands.map(
+        ({ userID, commands }) => `<@!${userID}> is granted with ${commands.map(
           (command) => `\`${command}\``,
-        ).join`, `}`,
+        ).join`, `}.`,
       );
 
       if (grants.length === 0) {
