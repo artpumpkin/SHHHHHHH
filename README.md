@@ -54,13 +54,13 @@
 
 | NAME     | DESCRIPTION                             | ALIASES                       |  CD  | USAGE                           | EXAMPLES                                                     |  GO  |  R   |
 | -------- | --------------------------------------- | ----------------------------- | :--: | ------------------------------- | ------------------------------------------------------------ | :--: | :--: |
-| `ban`    | Ban a specific user or users.           |                               |  0   | `ban [user(s)]`                 | `donate`                                                     |  ❌   |  ❌   |
-| `eval`   | Evaluate a JavaScript expression.       | `e`<br />`ev`<br />`evaluate` |  0   | `eval [expression]`             | `help`<br />`help mute`                                      |  ❌   |  ❌   |
-| `gif`    | Generate random gifs.                   |                               |  0   | `gif [search]`                  | `info`                                                       |  ❌   |  ❌   |
-| `grant`  | Grants a command to a specific user.    |                               |  0   | `grant [command] [[user] ...]`  | `invite`                                                     |  ❌   |  ❌   |
-| `reload` | Reloads a specific command.             |                               |  0   | `reload [command]`              | `report when I use the mute command it doesn't work`         |  ❌   |  ❌   |
-| `revoke` | Revokes a command from a specific user. |                               |  0   | `revoke [command] [[user] ...]` | `suggest please add a mute command to mute people from voice channel` |  ❌   |  ❌   |
-| `unban`  | Unban a specific user or users.         |                               |  0   | `vote`                          | `unban [user(s)]`                                            |  ❌   |  ❌   |
+| `ban`    | Ban a specific user or users.           |                               |  0   | `ban [user(s)]`                 | `donate`                                                     |  ❌   |  ✔️   |
+| `eval`   | Evaluate a JavaScript expression.       | `e`<br />`ev`<br />`evaluate` |  0   | `eval [expression]`             | `help`<br />`help mute`                                      |  ❌   |  ✔️   |
+| `gif`    | Generate random gifs.                   |                               |  0   | `gif [search]`                  | `info`                                                       |  ❌   |  ✔️   |
+| `grant`  | Grants a command to a specific user.    |                               |  0   | `grant [command] [[user] ...]`  | `invite`                                                     |  ❌   |  ✔️   |
+| `reload` | Reloads a specific command.             |                               |  0   | `reload [command]`              | `report when I use the mute command it doesn't work`         |  ❌   |  ✔️  |
+| `revoke` | Revokes a command from a specific user. |                               |  0   | `revoke [command] [[user] ...]` | `suggest please add a mute command to mute people from voice channel` |  ❌   |  ✔️   |
+| `unban`  | Unban a specific user or users.         |                               |  0   | `vote`                          | `unban [user(s)]`                                            |  ❌   |  ✔️   |
 
 
 
