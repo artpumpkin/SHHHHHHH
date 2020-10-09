@@ -10,7 +10,7 @@ module.exports = {
   async execute(message) {
     const messageEmbed = embedMessage(message);
     messageEmbed.setDescription(
-      '> Vote **[here](https://top.gg/)** to increase the visibility of the bot!\n⠀',
+      '> Vote **[here](https://top.gg/bot/761297770429939742)** to increase the visibility of the bot!\n⠀',
     );
     return message.channel.send(messageEmbed);
   },
