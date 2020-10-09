@@ -23,7 +23,7 @@ body {
 
 .container {
   width: 80%;
-  min-width: calc(1400px * 0.8);
+  /* min-width: calc(1400px * 0.8); */
   max-width: 1100px;
   margin: auto;
 }
@@ -52,6 +52,12 @@ p.prefix a:hover {
   background: #e3e3e3;
 }
 
+.table-container {
+  overflow: auto;
+  margin: auto;
+  margin-bottom: 40px;
+}
+
 table {
   background: #3e4345;
   border-radius: 20px;
@@ -59,8 +65,6 @@ table {
   color: #ddd;
   font-size: 14px;
   border-collapse: collapse;
-  margin: auto;
-  margin-bottom: 40px;
 }
 
 thead tr {
@@ -115,4 +119,10 @@ td div {
   margin-bottom: 2px;
   padding: 4px;
   border-radius: 4px;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: 90%;
+  }
 }

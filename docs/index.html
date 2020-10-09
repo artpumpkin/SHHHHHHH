@@ -3,30 +3,32 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SHHHHHHH!</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css?_cacheOverride=1602265961856"
     integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
-    crossorigin="anonymous" />
-  <link href="css/style.css" rel="stylesheet" />
+    crossorigin="anonymous">
+  <link href="http://127.0.0.1:5501/docs/css/style.css?_cacheOverride=1602265961856" rel="stylesheet">
 </head>
 
 <body>
   <div class="container">
     <p align="center">
       <a href="https://top.gg/bot/761297770429939742">
-        <img src="https://cdn.discordapp.com/avatars/761297770429939742/93c114b906f586162657b9712c04fbf8.png?size=128" />
+        <img src="https://cdn.discordapp.com/avatars/761297770429939742/93c114b906f586162657b9712c04fbf8.png?size=128">
       </a>
-    <h1 align="center">SHHHHHHH!</h1>
     </p>
-    </br>
+    <h1 align="center">SHHHHHHH!</h1>
+    <p></p>
+    <br>
     <p align="center">
       <a href="https://paypal.me/shhhhhhhbot">
-        <img src="https://img.shields.io/badge/PayPal-grey?style=flat-square&logo=paypal" />
+        <img src="https://img.shields.io/badge/PayPal-grey?style=flat-square&amp;logo=paypal">
       </a>
       <a href="https://www.patreon.com/shhhhhhh">
-        <img src="https://img.shields.io/badge/Patreon-grey?style=flat-square&logo=patreon" />
+        <img src="https://img.shields.io/badge/Patreon-grey?style=flat-square&amp;logo=patreon">
       </a>
     </p>
     <p id="description">
@@ -35,11 +37,369 @@
     </p>
     <h2>Prefix</h2>
     <p class="prefix">
-      <b>sh!</b> is the default bot prefix, <a target="_blank" href="https://discord.com/oauth2/authorize?client_id=761297770429939742&scope=bot&permissions=4194304">click here</a> to invite the bot to your server.
+      <b>sh!</b> is the default bot prefix, <a target="_blank"
+        href="https://discord.com/oauth2/authorize?client_id=761297770429939742&amp;scope=bot&amp;permissions=4194304">click
+        here</a> to invite the bot to your server.
     </p>
     <h2>Bot Commands</h2>
-  </div>
-  <script src="js/main.js"></script>
-</body>
+    <h3>Among Us</h3>
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>name</th>
+            <th>description</th>
+            <th>aliases</th>
+            <th>cooldown</th>
+            <th>usage</th>
+            <th>examples</th>
+            <th>guildOnly</th>
+            <th>restricted</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>imposter</td>
+            <td>Guess the imposter from a voice channel or a group of mentioned users.</td>
+            <td>
+              <div>who</div>
+            </td>
+            <td>3</td>
+            <td>imposter [[user] ...]</td>
+            <td>
+              <div>imposter</div>
+              <div>imposter @user1</div>
+              <div>imposter @user1 @user2 @user3</div>
+            </td>
+            <td><i class="fas fa-check-circle"></i></td>
+            <td><i class="fas fa-times-circle"></i></td>
+          </tr>
+          <tr>
+            <td>mute</td>
+            <td>Mutes all users or a specific user(s) in a certain channel.</td>
+            <td>
+              <div>m</div>
+            </td>
+            <td>3</td>
+            <td>mute [[user] ...]</td>
+            <td>
+              <div>mute</div>
+              <div>mute @user1</div>
+              <div>mute @user1 @user2 @user3</div>
+            </td>
+            <td><i class="fas fa-check-circle"></i></td>
+            <td><i class="fas fa-times-circle"></i></td>
+          </tr>
+          <tr>
+            <td>shhh</td>
+            <td>Generate random shush gifs for fun.</td>
+            <td>
+              <div>shhhh</div>
+              <div>shhhhh</div>
+              <div>shhhhhh</div>
+            </td>
+            <td>3</td>
+            <td>shhh</td>
+            <td>
+              <div>shhh</div>
+            </td>
+            <td><i class="fas fa-times-circle"></i></td>
+            <td><i class="fas fa-times-circle"></i></td>
+          </tr>
+          <tr>
+            <td>unmute</td>
+            <td>Unmutes all users or a specific user(s) in a certain channel.</td>
+            <td>
+              <div>u</div>
+            </td>
+            <td>3</td>
+            <td>unmute [[user] ...]</td>
+            <td>
+              <div>unmute</div>
+              <div>unmute @user1</div>
+              <div>unmute @user1 @user2 @user3</div>
+            </td>
+            <td><i class="fas fa-check-circle"></i></td>
+            <td><i class="fas fa-times-circle"></i></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
+    <h3>General</h3>
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>name</th>
+            <th>description</th>
+            <th>aliases</th>
+            <th>cooldown</th>
+            <th>usage</th>
+            <th>examples</th>
+            <th>guildOnly</th>
+            <th>restricted</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>donate</td>
+            <td>Show the donation's information.</td>
+            <td>
+              <div>d</div>
+            </td>
+            <td>3</td>
+            <td>donate</td>
+            <td>
+              <div>donate</div>
+            </td>
+            <td><i class="fas fa-times-circle"></i></td>
+            <td><i class="fas fa-times-circle"></i></td>
+          </tr>
+          <tr>
+            <td>help</td>
+            <td>Shows a list of commands, or command information.</td>
+            <td>
+              <div>h</div>
+              <div>commands</div>
+              <div>c</div>
+            </td>
+            <td>3</td>
+            <td>help [command]</td>
+            <td>
+              <div>help</div>
+              <div>help mute</div>
+            </td>
+            <td><i class="fas fa-times-circle"></i></td>
+            <td><i class="fas fa-times-circle"></i></td>
+          </tr>
+          <tr>
+            <td>info</td>
+            <td>Shows information about the bot and its owner.</td>
+            <td>
+              <div>about</div>
+              <div>stats</div>
+            </td>
+            <td>3</td>
+            <td>info</td>
+            <td>
+              <div>info</div>
+            </td>
+            <td><i class="fas fa-times-circle"></i></td>
+            <td><i class="fas fa-times-circle"></i></td>
+          </tr>
+          <tr>
+            <td>invite</td>
+            <td>Get a link to invite the bot to your server.</td>
+            <td>
+              <div>i</div>
+              <div>inv</div>
+              <div>invitebot</div>
+              <div>link</div>
+            </td>
+            <td>3</td>
+            <td>invite</td>
+            <td>
+              <div>invite</div>
+            </td>
+            <td><i class="fas fa-times-circle"></i></td>
+            <td><i class="fas fa-times-circle"></i></td>
+          </tr>
+          <tr>
+            <td>report</td>
+            <td>Sends a report to the developer.</td>
+            <td>
+              <div>r</div>
+              <div>report</div>
+            </td>
+            <td>3</td>
+            <td>report [bug or issue]</td>
+            <td>
+              <div>report when I use the mute command it doesn\t work</div>
+            </td>
+            <td><i class="fas fa-times-circle"></i></td>
+            <td><i class="fas fa-times-circle"></i></td>
+          </tr>
+          <tr>
+            <td>suggest</td>
+            <td>Sends suggestions to the developer.</td>
+            <td>
+              <div>s</div>
+              <div>suggestion</div>
+            </td>
+            <td>3</td>
+            <td>suggest [suggestion(s)]</td>
+            <td>
+              <div>suggest please add a mute command to mute people from voice channel</div>
+            </td>
+            <td><i class="fas fa-times-circle"></i></td>
+            <td><i class="fas fa-times-circle"></i></td>
+          </tr>
+          <tr>
+            <td>vote</td>
+            <td>Shows how to vote for the bot.</td>
+            <td></td>
+            <td>3</td>
+            <td>vote</td>
+            <td>
+              <div>vote</div>
+            </td>
+            <td><i class="fas fa-times-circle"></i></td>
+            <td><i class="fas fa-times-circle"></i></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <h3>Owner</h3>
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>name</th>
+            <th>description</th>
+            <th>aliases</th>
+            <th>cooldown</th>
+            <th>usage</th>
+            <th>examples</th>
+            <th>guildOnly</th>
+            <th>restricted</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>ban</td>
+            <td>Ban a specific user or users.</td>
+            <td></td>
+            <td>0</td>
+            <td>ban [user(s)]</td>
+            <td>
+              <div>ban @user1</div>
+              <div>ban @user1 @user2</div>
+            </td>
+            <td><i class="fas fa-times-circle"></i></td>
+            <td><i class="fas fa-check-circle"></i></td>
+          </tr>
+          <tr>
+            <td>eval</td>
+            <td>Evaluate a JavaScript expression.</td>
+            <td>
+              <div>e</div>
+              <div>ev</div>
+              <div>evaluate</div>
+            </td>
+            <td>0</td>
+            <td>eval [expression]</td>
+            <td>
+              <div>eval expression</div>
+            </td>
+            <td><i class="fas fa-times-circle"></i></td>
+            <td><i class="fas fa-check-circle"></i></td>
+          </tr>
+          <tr>
+            <td>gif</td>
+            <td>Generate random gifs.</td>
+            <td></td>
+            <td>0</td>
+            <td>gif [search]</td>
+            <td>
+              <div>gif footbal</div>
+            </td>
+            <td><i class="fas fa-times-circle"></i></td>
+            <td><i class="fas fa-check-circle"></i></td>
+          </tr>
+          <tr>
+            <td>grant</td>
+            <td>Grants a command to a specific user.</td>
+            <td></td>
+            <td>0</td>
+            <td>grant [command] [[user] ...]</td>
+            <td>
+              <div>grant</div>
+              <div>grant @user1</div>
+              <div>grant eval @user1</div>
+            </td>
+            <td><i class="fas fa-times-circle"></i></td>
+            <td><i class="fas fa-check-circle"></i></td>
+          </tr>
+          <tr>
+            <td>reload</td>
+            <td>Reloads a specific command.</td>
+            <td></td>
+            <td>0</td>
+            <td>reload [command]</td>
+            <td>
+              <div>reload</div>
+              <div>reload help</div>
+            </td>
+            <td><i class="fas fa-times-circle"></i></td>
+            <td><i class="fas fa-check-circle"></i></td>
+          </tr>
+          <tr>
+            <td>revoke</td>
+            <td>Revokes a command from a specific user.</td>
+            <td></td>
+            <td>0</td>
+            <td>revoke [command] [[user] ...]</td>
+            <td>
+              <div>revoke</div>
+              <div>revoke @user1</div>
+              <div>revoke eval @user1</div>
+            </td>
+            <td><i class="fas fa-times-circle"></i></td>
+            <td><i class="fas fa-check-circle"></i></td>
+          </tr>
+          <tr>
+            <td>unban</td>
+            <td>Unban a specific user or users.</td>
+            <td></td>
+            <td>0</td>
+            <td>unban [user(s)]</td>
+            <td>
+              <div>unban @user1</div>
+              <div>unban @user1 @user2</div>
+            </td>
+            <td><i class="fas fa-times-circle"></i></td>
+            <td><i class="fas fa-check-circle"></i></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <h3>Settings</h3>
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>name</th>
+            <th>description</th>
+            <th>aliases</th>
+            <th>cooldown</th>
+            <th>usage</th>
+            <th>examples</th>
+            <th>guildOnly</th>
+            <th>restricted</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>prefix</td>
+            <td>Shows or changes the bot's prefix.</td>
+            <td>
+              <div>p</div>
+              <div>pf</div>
+            </td>
+            <td>3</td>
+            <td>prefix [prefix]</td>
+            <td>
+              <div>prefix</div>
+              <div>prefix !</div>
+              <div>prefix _</div>
+            </td>
+            <td><i class="fas fa-check-circle"></i></td>
+            <td><i class="fas fa-times-circle"></i></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
 </html>
