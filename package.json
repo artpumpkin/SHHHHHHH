@@ -1,0 +1,29 @@
+{
+  "name": "shhhhhhh",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "pm2-runtime start ecosystem.config.js --env production",
+    "dev": "pm2-runtime start ecosystem.config.js --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@keyv/mongo": "^1.1.0",
+    "canvas": "^2.6.1",
+    "discord.js": "^12.3.1",
+    "dotenv": "^8.2.0",
+    "keyv": "^4.0.3",
+    "moment": "^2.29.0",
+    "mongoose": "^5.10.8",
+    "node-fetch": "^2.6.1",
+    "pm2": "^4.5.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.10.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.1"
+  }
+}
