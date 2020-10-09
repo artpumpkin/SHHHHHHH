@@ -14,26 +14,25 @@ class SHHHHHHH extends Client {
 
   populateCommands() {
     const categories = fs.readdirSync(path.resolve(__dirname, '../commands'));
-    categories.forEach((category) => {
+    for (const category of categories) {
       const commandFiles = fs.readdirSync(
         path.resolve(__dirname, `${'../commands/'}${category}`),
       );
-      commandFiles.forEach((file) => {
+      for (const file of commandFiles) {
         const command = require(`../commands/${category}/${file}`);
         command.category = category;
         this.commands.set(command.name, command);
-      });
-    });
+      }
+    }
   }
 
   handleEvents() {
     const eventFiles = fs.readdirSync(path.resolve(__dirname, '../events'));
-    eventFiles
-      .map((fileName) => fileName.replace('.js', ''))
-      .forEach((eventName) => {
-        const eventHandler = require(`../events/${eventName}`);
-        this[eventName === 'ready' ? 'once' : 'on'](eventName, (...args) => eventHandler(this, ...args));
-      });
+    const eventNames = eventFiles.map((fileName) => fileName.replace('.js', ''));
+    for (const eventName of eventNames) {
+      const eventHandler = require(`../events/${eventName}`);
+      this[eventName === 'ready' ? 'once' : 'on'](eventName, (...args) => eventHandler(this, ...args));
+    }
   }
 
   getCommand(name) {
