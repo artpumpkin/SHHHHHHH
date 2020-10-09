@@ -6,7 +6,7 @@ module.exports = {
   cooldown: 0,
   usage: 'eval [expression]',
   examples: ['eval expression'],
-  description: 'Evaluate a javascript expression.',
+  description: 'Evaluate a JavaScript expression.',
   restricted: true,
   async execute(message, prefix, args) {
     const messageEmbed = embedMessage(message);
