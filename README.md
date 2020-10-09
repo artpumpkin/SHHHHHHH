@@ -27,7 +27,7 @@
 
 ### Among Us
 
-| NAME       | DESCRIPTION                                                  | ALIASES                              |  CD  | USAGE                   | EXAMPLES                                                     |  GD  |  R   |
+| NAME       | DESCRIPTION                                                  | ALIASES                              |  CD  | USAGE                   | EXAMPLES                                                     |  GO  |  R   |
 | ---------- | ------------------------------------------------------------ | ------------------------------------ | :--: | ----------------------- | ------------------------------------------------------------ | :--: | :--: |
 | `imposter` | Guess the imposter from a voice channel or a group of mentioned users. | `who`                                |  3   | `imposter [[user] ...]` | `imposter`<br />`imposter @user1`<br />`imposter @user1 @user2 @user3` |  ✔️   |  ❌   |
 | `mute`     | Mutes all users or a specific user(s) in a certain channel.  | `m`                                  |  3   | `mute [[user] ...]`     | `mute`<br />`mute @user1`<br />`mute @user1 @user2 @user3`   |  ✔️   |  ❌   |
@@ -38,7 +38,7 @@
 
 ### General
 
-| NAME      | DESCRIPTION                                       | ALIASES                                     |  CD  | USAGE                     | EXAMPLES                                                     |  GD  |  R   |
+| NAME      | DESCRIPTION                                       | ALIASES                                     |  CD  | USAGE                     | EXAMPLES                                                     |  GO  |  R   |
 | --------- | ------------------------------------------------- | ------------------------------------------- | :--: | ------------------------- | ------------------------------------------------------------ | :--: | :--: |
 | `donate`  | Show the donation's information.                  | `d`                                         |  3   | `donate`                  | `donate`                                                     |  ❌   |  ❌   |
 | `help`    | Shows a list of commands, or command information. | `h`<br />`commands`<br />`c`                |  3   | `help [command]`          | `help`<br />`help mute`                                      |  ❌   |  ❌   |
@@ -52,21 +52,21 @@
 
 ### Owner
 
-| NAME     | DESCRIPTION                             | ALIASES                       |  CD  | USAGE                           | EXAMPLES                                                     |  GD  |  R   |
+| NAME     | DESCRIPTION                             | ALIASES                       |  CD  | USAGE                           | EXAMPLES                                                     |  GO  |  R   |
 | -------- | --------------------------------------- | ----------------------------- | :--: | ------------------------------- | ------------------------------------------------------------ | :--: | :--: |
-| `ban`    | Ban a specific user or users.           |                               |  0   | `ban [user(s)]`                 | `donate`                                                     |  ❌   |  ❌   |
-| `eval`   | Evaluate a JavaScript expression.       | `e`<br />`ev`<br />`evaluate` |  0   | `eval [expression]`             | `help`<br />`help mute`                                      |  ❌   |  ❌   |
-| `gif`    | Generate random gifs.                   |                               |  0   | `gif [search]`                  | `info`                                                       |  ❌   |  ❌   |
-| `grant`  | Grants a command to a specific user.    |                               |  0   | `grant [command] [[user] ...]`  | `invite`                                                     |  ❌   |  ❌   |
-| `reload` | Reloads a specific command.             |                               |  0   | `reload [command]`              | `report when I use the mute command it doesn't work`         |  ❌   |  ❌   |
-| `revoke` | Revokes a command from a specific user. |                               |  0   | `revoke [command] [[user] ...]` | `suggest please add a mute command to mute people from voice channel` |  ❌   |  ❌   |
-| `unban`  | Unban a specific user or users.         |                               |  0   | `vote`                          | `unban [user(s)]`                                            |  ❌   |  ❌   |
+| `ban`    | Ban a specific user or users.           |                               |  0   | `ban [user(s)]`                 | `donate`                                                     |  ❌   |  ✔️   |
+| `eval`   | Evaluate a JavaScript expression.       | `e`<br />`ev`<br />`evaluate` |  0   | `eval [expression]`             | `help`<br />`help mute`                                      |  ❌   |  ✔️   |
+| `gif`    | Generate random gifs.                   |                               |  0   | `gif [search]`                  | `info`                                                       |  ❌   |  ✔️   |
+| `grant`  | Grants a command to a specific user.    |                               |  0   | `grant [command] [[user] ...]`  | `invite`                                                     |  ❌   |  ✔️   |
+| `reload` | Reloads a specific command.             |                               |  0   | `reload [command]`              | `report when I use the mute command it doesn't work`         |  ❌   |  ✔️  |
+| `revoke` | Revokes a command from a specific user. |                               |  0   | `revoke [command] [[user] ...]` | `suggest please add a mute command to mute people from voice channel` |  ❌   |  ✔️   |
+| `unban`  | Unban a specific user or users.         |                               |  0   | `vote`                          | `unban [user(s)]`                                            |  ❌   |  ✔️   |
 
 
 
 ### Settings
 
-| NAME     | DESCRIPTION                        | ALIASES       |  CD  | USAGE             | EXAMPLES                                 |  GD  |  R   |
+| NAME     | DESCRIPTION                        | ALIASES       |  CD  | USAGE             | EXAMPLES                                 |  GO  |  R   |
 | -------- | ---------------------------------- | ------------- | :--: | ----------------- | ---------------------------------------- | :--: | :--: |
 | `prefix` | Shows or changes the bot's prefix. | `p`<br />`pf` |  3   | `prefix [prefix]` | `prefix`<br />`prefix !`<br />`prefix _` |  ✔️   |  ❌   |
 
@@ -76,7 +76,7 @@
 
 > **CD** *Cool Down*
 >
-> **GD** *Guild Only*
+> **GO** *Guild Only*
 >
 > **R** *Restricted*
 
