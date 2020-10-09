@@ -5,7 +5,7 @@ const { random } = require('../../utils/helpers');
 module.exports = {
   name: 'gif',
   aliases: [],
-  cooldown: 3,
+  cooldown: 0,
   usage: 'gif [search]',
   examples: ['gif footbal'],
   description: 'Generate random gifs.',
