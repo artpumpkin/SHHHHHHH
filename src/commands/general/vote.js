@@ -2,7 +2,7 @@ const { embedMessage } = require('../../utils/helpers');
 
 module.exports = {
   name: 'vote',
-  aliases: ['about', 'stats'],
+  aliases: [],
   cooldown: 3,
   usage: 'vote',
   examples: ['vote'],
