@@ -113,15 +113,12 @@ const log = async (message) => {
 };
 
 const findAsync = async (elements, callback) => {
-  // eslint-disable-next-line no-restricted-syntax
   for (const element of elements) {
-    // eslint-disable-next-line no-await-in-loop
     if (await callback(element)) {
       return element;
     }
   }
-  // eslint-enable-next-line no-await-in-loop
-  // eslint-enable-next-line no-restricted-syntax
+  return undefined;
 };
 
 module.exports = {

@@ -13,8 +13,7 @@ module.exports = {
     const messageEmbed = embedMessage(message);
 
     const commands = {};
-
-    for (const command of message.client.commands) {
+    for (const command of message.client.commands.array()) {
       const userID = message.author.id;
       const owner = isOwner(userID);
       const granted = await isGranted(userID, command.name);
