@@ -12,7 +12,7 @@ module.exports = {
   usage: 'imposter [[user] ...]',
   examples: ['imposter', 'imposter @user1', 'imposter @user1 @user2 @user3'],
   description:
-    'Guess the imposter from a voice channel or a group of mentioned users.',
+    'Guesses the imposter from a voice channel or a group of mentioned users.',
   guildOnly: true,
   async execute(message) {
     const messageEmbed = embedMessage(message);

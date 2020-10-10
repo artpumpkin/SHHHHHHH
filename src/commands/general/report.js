@@ -9,7 +9,7 @@ module.exports = {
   examples: [
     'report when I use the mute command it doesn\'t work',
   ],
-  description: 'Sends a report to the developer.',
+  description: 'Send a report to the developer.',
   async execute(message, prefix, args) {
     const messageEmbed = embedMessage(message);
 

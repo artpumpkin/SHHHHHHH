@@ -6,7 +6,7 @@ module.exports = {
   cooldown: 3,
   usage: 'vote',
   examples: ['vote'],
-  description: 'Shows how to vote for the bot.',
+  description: 'Show how to vote for the bot.',
   async execute(message) {
     const messageEmbed = embedMessage(message);
     messageEmbed.setDescription(

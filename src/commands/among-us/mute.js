@@ -6,7 +6,7 @@ module.exports = {
   cooldown: 3,
   usage: 'mute [[user] ...]',
   examples: ['mute', 'mute @user1', 'mute @user1 @user2 @user3'],
-  description: 'Mutes all users or a specific user(s) in a certain channel.',
+  description: 'Mute all users or a specific user(s) in a certain channel.',
   guildOnly: true,
   async execute(message, prefix, args) {
     const messageEmbed = embedMessage(message);

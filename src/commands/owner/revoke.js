@@ -7,7 +7,7 @@ module.exports = {
   cooldown: 0,
   usage: 'revoke [command] [[user] ...]',
   examples: ['revoke', 'revoke @user1', 'revoke eval @user1'],
-  description: 'Revokes a command from a specific user.',
+  description: 'Revoke a command from a specific user.',
   restricted: true,
   async execute(message, prefix, args) {
     const messageEmbed = embedMessage(message);

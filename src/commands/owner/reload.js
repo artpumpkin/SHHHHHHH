@@ -7,7 +7,7 @@ module.exports = {
   cooldown: 0,
   usage: 'reload [command]',
   examples: ['reload', 'reload help'],
-  description: 'Reloads a specific command.',
+  description: 'Reload a specific command.',
   restricted: true,
   async execute(message, prefix, args) {
     const messageEmbed = embedMessage(message);

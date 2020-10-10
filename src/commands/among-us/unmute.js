@@ -10,7 +10,7 @@ module.exports = {
     'unmute @user1',
     'unmute @user1 @user2 @user3',
   ],
-  description: 'Unmutes all users or a specific user(s) in a certain channel.',
+  description: 'Unmute all users or a specific user(s) in a certain channel.',
   guildOnly: true,
   async execute(message, prefix, args) {
     const messageEmbed = embedMessage(message);

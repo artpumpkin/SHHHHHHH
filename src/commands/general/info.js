@@ -6,7 +6,7 @@ module.exports = {
   cooldown: 3,
   usage: 'info',
   examples: ['info'],
-  description: 'Shows information about the bot and its owner.',
+  description: 'Show information about the bot and its owner.',
   async execute(message) {
     const messageEmbed = embedMessage(message);
     messageEmbed

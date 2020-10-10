@@ -7,7 +7,7 @@ module.exports = {
   cooldown: 0,
   usage: 'grant [command] [[user] ...]',
   examples: ['grant', 'grant @user1', 'grant eval @user1'],
-  description: 'Grants a command to a specific user.',
+  description: 'Grant a command to a specific user.',
   restricted: true,
   async execute(message, prefix, args) {
     const messageEmbed = embedMessage(message);

@@ -8,7 +8,7 @@ module.exports = {
   cooldown: 3,
   usage: 'help [command]',
   examples: ['help', 'help mute'],
-  description: 'Shows a list of commands, or command information.',
+  description: 'Show a list of commands, or command information.',
   async execute(message, prefix, args) {
     const messageEmbed = embedMessage(message);
 
