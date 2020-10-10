@@ -11,6 +11,7 @@ const onGuildDelete = async (client, guild) => {
     `🚽 Kicked from \`${guild.name}\` (${guild.id}) with ${
       guild.memberCount
     } member${addS(guild.memberCount)} after ${days} day${addS(days)} of use.`,
+    process.env.LOGS_CHANNEL_ID,
   );
   await Joindate.deleteOne({ guildID: guild.id });
 };

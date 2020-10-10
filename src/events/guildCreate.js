@@ -29,6 +29,7 @@ const onGuildCreate = async (client, guild) => {
   log(
     client,
     `🔗 Joined \`${guild.name}\` (${guild.id}) with ${guild.memberCount} members.`,
+    process.env.LOGS_CHANNEL_ID,
   );
 };
 

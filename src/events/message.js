@@ -77,7 +77,13 @@ const onMessage = async (client, message) => {
     }
   } catch (e) {
     console.error(e);
-    log(client, e);
+    log(
+      client,
+      `> \`${message.guild.name}\` (${message.guild.id})
+\`\`\`js
+${e} \`\`\``,
+      process.env.ERRORS_CHANNEL_ID,
+    );
   }
 };
 

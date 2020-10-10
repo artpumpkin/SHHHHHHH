@@ -100,10 +100,10 @@ const title = (words) => words.split`-`.map((word) => word[0].toUpperCase() + wo
 
 const allCaps = (words) => words.split`-`.map((word) => word.toUpperCase()).join`_`;
 
-const log = async (client, message) => {
+const log = async (client, message, channelID) => {
   const logsChannel = client.guilds.cache
     .get(process.env.SUPPORT_GUILD_ID)
-    .channels.cache.get(process.env.LOGS_CHANNEL_ID);
+    .channels.cache.get(channelID);
 
   const logEmbed = new MessageEmbed()
     .setColor('#1976d2')
