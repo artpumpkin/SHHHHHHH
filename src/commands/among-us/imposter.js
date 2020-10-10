@@ -23,7 +23,7 @@ module.exports = {
       let member = null;
       const mapCallback = (m) => ({
         name: m.nickname ?? m.user.username,
-        mention: `<@!${m.id}>`,
+        mention: `<@${m.id}>`,
       });
 
       let mentionedMembers = null;

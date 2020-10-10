@@ -10,7 +10,7 @@ module.exports = {
   async execute(message) {
     const messageEmbed = embedMessage(message);
     messageEmbed.setDescription(
-      `<@!${message.author.id}> [click here to invite **${message.client.user.username}** to your server.](https://discordapp.com/oauth2/authorize?client_id=${message.client.user.id}&scope=bot&permissions=4194304)\n⠀`,
+      `<@${message.author.id}> [click here to invite **${message.client.user.username}** to your server.](https://discordapp.com/oauth2/authorize?client_id=${message.client.user.id}&scope=bot&permissions=4194304)\n⠀`,
     );
     return message.channel.send(messageEmbed);
   },
