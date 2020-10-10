@@ -1,4 +1,4 @@
-const { embedMessage } = require('../../utils/helpers');
+const { embedMessage, addS } = require('../../utils/helpers');
 
 module.exports = {
   name: 'mute',
@@ -12,7 +12,9 @@ module.exports = {
     const messageEmbed = embedMessage(message);
 
     if (!message.member.voice.channel) {
-      messageEmbed.setDescription('> Please join a voice channel to use this command.\n⠀');
+      messageEmbed.setDescription(
+        '> Please join a voice channel to use this command.\n⠀',
+      );
     } else if (args.length === 0) {
       messageEmbed.setDescription(
         `> All members of \`${message.member.voice.channel.name}\` channel have been muted.\n⠀`,
@@ -29,9 +31,7 @@ module.exports = {
 
       if (mutedMembers.length > 0) {
         messageEmbed.setDescription(
-          `> Member${
-            mutedMembers.length === 1 ? '' : 's'
-          } ${mutedMembers} of \`${
+          `> Member${addS(mutedMembers.length)} ${mutedMembers} of \`${
             message.member.voice.channel.name
           }\` channel ${
             mutedMembers.length === 1 ? 'has' : 'have'

@@ -121,6 +121,8 @@ const findAsync = async (elements, callback) => {
   return undefined;
 };
 
+const addS = (count) => (count === 1 ? '' : 's');
+
 module.exports = {
   joinPeriod,
   parseUptime,
@@ -132,4 +134,5 @@ module.exports = {
   allCaps,
   log,
   findAsync,
+  addS,
 };

@@ -1,4 +1,4 @@
-const { embedMessage } = require('../../utils/helpers');
+const { embedMessage, addS } = require('../../utils/helpers');
 const Grant = require('../../models/grant');
 
 module.exports = {
@@ -46,7 +46,7 @@ module.exports = {
           );
         } else {
           messageEmbed.setDescription(
-            `User${mentionedMembers === 1 ? '' : 's'} ${mentionedMembers.map(
+            `User${addS(mentionedMembers)} ${mentionedMembers.map(
               (m) => m.name,
             )} ${mentionedMembers === 1 ? 'has' : 'have'} been revoked from \`${
               command.name

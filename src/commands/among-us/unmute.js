@@ -1,4 +1,4 @@
-const { embedMessage } = require('../../utils/helpers');
+const { embedMessage, addS } = require('../../utils/helpers');
 
 module.exports = {
   name: 'unmute',
@@ -33,9 +33,7 @@ module.exports = {
 
       if (unmutedMembers.length > 0) {
         messageEmbed.setDescription(
-          `> Member${
-            unmutedMembers.length === 1 ? '' : 's'
-          } ${unmutedMembers} of \`${
+          `> Member${addS(unmutedMembers.length)} ${unmutedMembers} of \`${
             message.member.voice.channel.name
           }\` channel ${
             unmutedMembers.length === 1 ? 'has' : 'have'

@@ -1,4 +1,4 @@
-const { embedMessage } = require('../../utils/helpers');
+const { embedMessage, addS } = require('../../utils/helpers');
 const Ban = require('../../models/ban');
 
 module.exports = {
@@ -32,9 +32,7 @@ module.exports = {
 
       if (bannedMembers.length > 0) {
         messageEmbed.setDescription(
-          `> Member${
-            bannedMembers.length === 1 ? '' : 's'
-          } ${bannedMembers.join`, `} ${
+          `> Member${addS(bannedMembers.length)} ${bannedMembers.join`, `} ${
             bannedMembers.length === 1 ? 'has' : 'have'
           } been banned.\n⠀`,
         );

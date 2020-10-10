@@ -1,4 +1,4 @@
-const { embedMessage } = require('../../utils/helpers');
+const { embedMessage, addS } = require('../../utils/helpers');
 const Grant = require('../../models/grant');
 
 module.exports = {
@@ -54,7 +54,7 @@ module.exports = {
           messageEmbed.setDescription('> No mentioned members to grant.\n⠀');
         } else {
           messageEmbed.setDescription(
-            `User${mentionedMembers === 1 ? '' : 's'} ${mentionedMembers.map(
+            `User${addS(mentionedMembers)} ${mentionedMembers.map(
               (m) => m.name,
             )} ${mentionedMembers === 1 ? 'has' : 'have'} been granted with \`${
               command.name
