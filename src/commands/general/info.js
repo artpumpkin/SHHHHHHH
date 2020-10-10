@@ -33,7 +33,7 @@ module.exports = {
       .addField(
         ':spider_web: Links',
         `[Invite](https://discordapp.com/oauth2/authorize?client_id=${message.client.user.id}&scope=bot&permissions=4194304)
-      [Vote](https://top.gg/bot/761297770429939742/vote)
+      [Vote](https://top.gg/bot/${process.env.CLIENT_ID}/vote)
       [Donate](https://paypal.me/shhhhhhhbot)`,
         true,
       )
