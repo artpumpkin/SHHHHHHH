@@ -21,7 +21,10 @@ module.exports = {
       const command = message.client.getCommand(commandName);
 
       if (command) {
-        const commandPath = path.resolve(__dirname, command.name);
+        const commandPath = path.resolve(
+          __dirname,
+          `../${command.category}/${command.name}`,
+        );
         delete require.cache[require.resolve(commandPath)];
         message.client.commands.set(command.name, require(commandPath));
         messageEmbed.setDescription(
