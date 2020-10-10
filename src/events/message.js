@@ -1,39 +1,35 @@
-const { DEFAULT_PREFIX } = require('../utils/constants');
-const Ban = require('../models/ban');
-const Prefix = require('../models/prefix');
 const {
   embedMessage,
   isCooleddown,
   findAsync,
   log,
 } = require('../utils/helpers');
+const {
+  isBanned,
+  getPrefix,
+  isMentionUsed,
+  isPrefixUsed,
+} = require('../client/SHHHHHHH');
 
 const onMessage = async (client, message) => {
   try {
-    if (await Ban.exists({ userID: message.author.id })) return;
+    if (await isBanned(message.author.id)) return;
 
-    let prefix = DEFAULT_PREFIX;
-    if (message.guild) {
-      const doc = await Prefix.findOne({ guildID: message.guild.id });
-      prefix = doc?.prefix || prefix;
-    }
+    const prefix = await getPrefix(message.guild);
 
-    const match = new RegExp(`^<@!?${client.user.id}>`).test(message.content);
-    if (
-      (!message.content.startsWith(prefix) || message.author.bot)
-      && (!match || message.author.bot)
-    ) {
-      return;
-    }
+    const mentionUsed = isMentionUsed(message, client.user.id);
+    const prefixUsed = isPrefixUsed(message, prefix);
+
+    if (!prefixUsed && !mentionUsed) return;
 
     const args = message.content
-      .slice(match ? client.user.id.length + 4 : prefix.length)
+      .slice(mentionUsed ? client.user.id.length + 4 : prefix.length)
       .trim()
       .split(/\s+/)
       .filter((e) => e !== '');
 
     let embed = null;
-    if (match && args.length === 0) {
+    if (mentionUsed && args.length === 0) {
       const messageEmbed = embedMessage(message);
       messageEmbed.setDescription(`> My prefix is **\`${prefix}\`** _(you can also mention me)_.
       > To show all the available commands use **\`${`${prefix}help`}\`**.\n⠀`);

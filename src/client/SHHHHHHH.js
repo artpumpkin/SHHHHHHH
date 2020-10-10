@@ -1,7 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 const { Client, Collection } = require('discord.js');
+const Prefix = require('../models/prefix');
 const Grant = require('../models/grant');
+const Ban = require('../models/ban');
+const { DEFAULT_PREFIX } = require('../utils/constants');
 
 class SHHHHHHH extends Client {
   constructor() {
@@ -41,6 +44,24 @@ class SHHHHHHH extends Client {
     );
   }
 
+  static async getPrefix(guild) {
+    const prefix = DEFAULT_PREFIX;
+    if (guild) {
+      const doc = await Prefix.findOne({ guildID: guild.id });
+      return doc?.prefix || prefix;
+    }
+    return prefix;
+  }
+
+  static isMentionUsed(message, userID) {
+    const match = new RegExp(`^<@!?${userID}>`).test(message.content);
+    return match && !message.author.bot;
+  }
+
+  static isPrefixUsed(message, prefix) {
+    return message.content.startsWith(prefix) && !message.author.bot;
+  }
+
   static isOwner(userID) {
     return process.env.OWNER_ID === userID;
   }
@@ -48,6 +69,10 @@ class SHHHHHHH extends Client {
   static async isGranted(userID, command) {
     const doc = await Grant.findOne({ userID });
     return doc?.commands.includes(command);
+  }
+
+  static async isBanned(userID) {
+    return Ban.exists({ userID });
   }
 }
 
