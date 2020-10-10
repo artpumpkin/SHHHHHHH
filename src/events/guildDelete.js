@@ -7,6 +7,7 @@ const onGuildDelete = async (client, guild) => {
   const doc = await Joindate.findOne({ guildID: guild.id });
   const days = joinPeriod(doc.createdAt);
   log(
+    client,
     `🚽 Kicked from \`${guild.name}\` after ${days} day${
       days === 1 ? '' : 's'
     } of use.`,

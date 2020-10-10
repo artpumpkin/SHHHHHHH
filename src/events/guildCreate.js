@@ -26,7 +26,10 @@ const onGuildCreate = async (client, guild) => {
     guildID: guild.id,
   });
   await joindate.save();
-  log(`🔗 Joined \`${guild.name}\` (${guild.id}) with ${guild.memberCount} members.`);
+  log(
+    client,
+    `🔗 Joined \`${guild.name}\` (${guild.id}) with ${guild.memberCount} members.`,
+  );
 };
 
 module.exports = onGuildCreate;
