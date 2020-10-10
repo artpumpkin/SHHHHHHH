@@ -9,6 +9,8 @@ const {
   getPrefix,
   isMentionUsed,
   isPrefixUsed,
+  isOwner,
+  isGranted,
 } = require('../client/SHHHHHHH');
 
 const onMessage = async (client, message) => {
@@ -38,13 +40,10 @@ const onMessage = async (client, message) => {
       const commandName = args.shift().toLowerCase();
       const command = await findAsync(client.commands.array(), async (c) => {
         const commandExists = c.name === commandName || c.aliases.includes(commandName);
-        const isOwner = client.constructor.isOwner(message.author.id);
-        const isGranted = await client.constructor.isGranted(
-          message.author.id,
-          c.name,
-        );
+        const owner = isOwner(message.author.id);
+        const granted = await isGranted(message.author.id, c.name);
         const notRestricted = !c.restricted;
-        return commandExists && (notRestricted || isOwner || isGranted);
+        return commandExists && (notRestricted || owner || granted);
       });
 
       if (command) {
