@@ -30,9 +30,9 @@
 | NAME       | DESCRIPTION                                                  | ALIASES                              |  CD  | USAGE                   | EXAMPLES                                                     |  GO  |  R   |
 | ---------- | ------------------------------------------------------------ | ------------------------------------ | :--: | ----------------------- | ------------------------------------------------------------ | :--: | :--: |
 | `imposter` | Guess the imposter from a voice channel or a group of mentioned users. | `who`                                |  3   | `imposter [[user] ...]` | `imposter`<br />`imposter @user1`<br />`imposter @user1 @user2 @user3` |  ✔️   |  ❌   |
-| `mute`     | Mutes all users or a specific user(s) in a certain channel.  | `m`                                  |  3   | `mute [[user] ...]`     | `mute`<br />`mute @user1`<br />`mute @user1 @user2 @user3`   |  ✔️   |  ❌   |
+| `mute`     | Mute all users or a specific user(s) in a certain channel.  | `m`                                  |  3   | `mute [[user] ...]`     | `mute`<br />`mute @user1`<br />`mute @user1 @user2 @user3`   |  ✔️   |  ❌   |
 | `shhh`     | Generate random shush gifs for fun.                          | `shhhh`<br />`shhhhh`<br />`shhhhhh` |  3   | `shhh`                  | `shhh`                                                       |  ❌   |  ❌   |
-| `unmute`   | Unmutes all users or a specific user(s) in a certain channel. | `u`                                  |  3   | `unmute [[user] ...]`   | `unmute`<br />`unmute @user1`<br />`unmute @user1 @user2 @user3` |  ✔️   |  ❌   |
+| `unmute`   | Unmute all users or a specific user(s) in a certain channel. | `u`                                  |  3   | `unmute [[user] ...]`   | `unmute`<br />`unmute @user1`<br />`unmute @user1 @user2 @user3` |  ✔️   |  ❌   |
 
 
 
@@ -41,12 +41,12 @@
 | NAME      | DESCRIPTION                                       | ALIASES                                     |  CD  | USAGE                     | EXAMPLES                                                     |  GO  |  R   |
 | --------- | ------------------------------------------------- | ------------------------------------------- | :--: | ------------------------- | ------------------------------------------------------------ | :--: | :--: |
 | `donate`  | Show the donation's information.                  | `d`                                         |  3   | `donate`                  | `donate`                                                     |  ❌   |  ❌   |
-| `help`    | Shows a list of commands, or command information. | `h`<br />`commands`<br />`c`                |  3   | `help [command]`          | `help`<br />`help mute`                                      |  ❌   |  ❌   |
-| `info`    | Shows information about the bot and its owner.    | `about`<br />`stats`                        |  3   | `info`                    | `info`                                                       |  ❌   |  ❌   |
+| `help`    | Show a list of commands, or command information. | `h`<br />`commands`<br />`c`                |  3   | `help [command]`          | `help`<br />`help mute`                                      |  ❌   |  ❌   |
+| `info`    | Show information about the bot and its owner.    | `about`<br />`stats`                        |  3   | `info`                    | `info`                                                       |  ❌   |  ❌   |
 | `invite`  | Get a link to invite the bot to your server.      | `i`<br />`inv`<br />`invitebot`<br />`link` |  3   | `invite`                  | `invite`                                                     |  ❌   |  ❌   |
-| `report`  | Sends a report to the developer.                  | `r`<br />`report`                           |  3   | `report [bug or issue]`   | `report when I use the mute command it doesn't work`         |  ❌   |  ❌   |
-| `suggest` | Sends suggestions to the developer.               | `s`<br />`suggestion`                       |  3   | `suggest [suggestion(s)]` | `suggest please add a mute command to mute people from voice channel` |  ❌   |  ❌   |
-| `vote`    | Shows how to vote for the bot.                    |                                             |  3   | `vote`                    | `vote`                                                       |  ❌   |  ❌   |
+| `report`  | Send a report to the developer.                  | `r`<br />`report`                           |  3   | `report [bug or issue]`   | `report when I use the mute command it doesn't work`         |  ❌   |  ❌   |
+| `suggest` | Send suggestions to the developer.               | `s`<br />`suggestion`                       |  3   | `suggest [suggestion(s)]` | `suggest please add a mute command to mute people from voice channel` |  ❌   |  ❌   |
+| `vote`    | Show how to vote for the bot.                    |                                             |  3   | `vote`                    | `vote`                                                       |  ❌   |  ❌   |
 
 
 
@@ -57,9 +57,9 @@
 | `ban`    | Ban a specific user or users.           |                               |  0   | `ban [user(s)]`                 | `donate`                                                     |  ❌   |  ✔️   |
 | `eval`   | Evaluate a JavaScript expression.       | `e`<br />`ev`<br />`evaluate` |  0   | `eval [expression]`             | `help`<br />`help mute`                                      |  ❌   |  ✔️   |
 | `gif`    | Generate random gifs.                   |                               |  0   | `gif [search]`                  | `info`                                                       |  ❌   |  ✔️   |
-| `grant`  | Grants a command to a specific user.    |                               |  0   | `grant [command] [[user] ...]`  | `invite`                                                     |  ❌   |  ✔️   |
-| `reload` | Reloads a specific command.             |                               |  0   | `reload [command]`              | `report when I use the mute command it doesn't work`         |  ❌   |  ✔️  |
-| `revoke` | Revokes a command from a specific user. |                               |  0   | `revoke [command] [[user] ...]` | `suggest please add a mute command to mute people from voice channel` |  ❌   |  ✔️   |
+| `grant`  | Grant a command to a specific user.    |                               |  0   | `grant [command] [[user] ...]`  | `invite`                                                     |  ❌   |  ✔️   |
+| `reload` | Reload a specific command.             |                               |  0   | `reload [command]`              | `report when I use the mute command it doesn't work`         |  ❌   |  ✔️  |
+| `revoke` | Revoke a command from a specific user. |                               |  0   | `revoke [command] [[user] ...]` | `suggest please add a mute command to mute people from voice channel` |  ❌   |  ✔️   |
 | `unban`  | Unban a specific user or users.         |                               |  0   | `vote`                          | `unban [user(s)]`                                            |  ❌   |  ✔️   |
 
 
@@ -68,7 +68,7 @@
 
 | NAME     | DESCRIPTION                        | ALIASES       |  CD  | USAGE             | EXAMPLES                                 |  GO  |  R   |
 | -------- | ---------------------------------- | ------------- | :--: | ----------------- | ---------------------------------------- | :--: | :--: |
-| `prefix` | Shows or changes the bot's prefix. | `p`<br />`pf` |  3   | `prefix [prefix]` | `prefix`<br />`prefix !`<br />`prefix _` |  ✔️   |  ❌   |
+| `prefix` | Show or change the bot's prefix. | `p`<br />`pf` |  3   | `prefix [prefix]` | `prefix`<br />`prefix !`<br />`prefix _` |  ✔️   |  ❌   |
 
 
 

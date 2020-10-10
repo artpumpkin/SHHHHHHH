@@ -7,7 +7,7 @@ module.exports = {
   cooldown: 3,
   usage: 'prefix [prefix]',
   examples: ['prefix', 'prefix !', 'prefix _'],
-  description: 'Show or changes the bot\'s prefix.',
+  description: 'Show or change the bot\'s prefix.',
   guildOnly: true,
   async execute(message, prefix, args) {
     const messageEmbed = embedMessage(message);
