@@ -13,7 +13,7 @@ const onMessage = async (client, message) => {
       prefix = doc?.prefix || prefix;
     }
 
-    const match = new RegExp(`^<@!${client.user.id}>`).test(message.content);
+    const match = new RegExp(`^<@!?${client.user.id}>`).test(message.content);
     if (
       (!message.content.startsWith(prefix) || message.author.bot)
       && (!match || message.author.bot)
