@@ -1,7 +1,12 @@
 const { DEFAULT_PREFIX } = require('../utils/constants');
 const Ban = require('../models/ban');
 const Prefix = require('../models/prefix');
-const { embedMessage, isCooleddown, findAsync } = require('../utils/helpers');
+const {
+  embedMessage,
+  isCooleddown,
+  findAsync,
+  log,
+} = require('../utils/helpers');
 
 const onMessage = async (client, message) => {
   try {
@@ -72,6 +77,7 @@ const onMessage = async (client, message) => {
     }
   } catch (e) {
     console.error(e);
+    log(client, e);
   }
 };
 
