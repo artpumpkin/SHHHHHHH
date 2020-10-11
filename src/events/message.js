@@ -56,6 +56,12 @@ const onMessage = async (client, message) => {
         } else if (isCooleddown(message, command)) {
           embed = await command.execute(message, prefix, args);
         }
+
+        log(
+          client,
+          `> <@${message.author.id}> used \`${command.name}\` in \`${message.guild.name}\``,
+          process.env.REQUESTS_CHANNEL_ID,
+        );
       }
     }
     if (embed) {
