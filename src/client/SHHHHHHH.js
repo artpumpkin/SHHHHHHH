@@ -54,8 +54,8 @@ class SHHHHHHH extends Client {
   }
 
   static isMentionUsed(message, userID) {
-    const match = new RegExp(`^<@!?${userID}>`).test(message.content);
-    return match && !message.author.bot;
+    const match = message.content.match(new RegExp(`^<@!?${userID}>`));
+    return match && !message.author.bot && { length: match[0].length };
   }
 
   static isPrefixUsed(message, prefix) {

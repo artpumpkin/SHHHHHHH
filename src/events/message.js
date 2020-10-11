@@ -25,7 +25,7 @@ const onMessage = async (client, message) => {
     if (!prefixUsed && !mentionUsed) return;
 
     const args = message.content
-      .slice(mentionUsed ? client.user.id.length + 4 : prefix.length)
+      .slice(mentionUsed ? mentionUsed.length : prefix.length)
       .trim()
       .split(/\s+/)
       .filter((e) => e !== '');
