@@ -19,7 +19,7 @@
 
 ## Prefix
 
-> **sh!** is the default bot prefix, [click here](https://discord.com/oauth2/authorize?client_id=761297770429939742&scope=bot&permissions=4194304) to invite the bot to your server.
+> **sh!** is the default bot prefix, [click here](https://discord.com/api/oauth2/authorize?client_id=761297770429939742&permissions=8&scope=bot) to invite the bot to your server.
 
 
 
