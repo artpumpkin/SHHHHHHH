@@ -2,6 +2,7 @@ const path = require('path');
 const moment = require('moment');
 const { MessageEmbed, Permissions } = require('discord.js');
 const { createCanvas, loadImage } = require('canvas');
+const Role = require('../models/role');
 
 const joinPeriod = (createdAt) => {
   const diff = moment().diff(Number(createdAt), 'milliseconds');
@@ -126,6 +127,15 @@ const addS = (count) => (count === 1 ? '' : 's');
 const getUserIDs = (args) => [...new Set(args.join` `.match(/\d+/g))];
 
 const isAdmin = (member) => member.hasPermission(Permissions.FLAGS.ADMINISTRATOR);
+
+const canUseCommand = async (message) => {
+  const { roles = [] } = (await Role.findOne({ guildID: message.guild.id })) ?? {};
+  return (
+    roles.length === 0
+    || message.member.roles.cache.some((role) => roles.includes(role.id))
+  );
+};
+
 module.exports = {
   joinPeriod,
   parseUptime,
@@ -140,4 +150,5 @@ module.exports = {
   addS,
   getUserIDs,
   isAdmin,
+  canUseCommand,
 };
