@@ -1,9 +1,11 @@
 const Prefix = require('../models/prefix');
 const Joindate = require('../models/joindate');
+const Role = require('../models/role');
 const { log, joinPeriod, addS } = require('../utils/helpers');
 
 const onGuildDelete = async (client, guild) => {
   await Prefix.deleteOne({ guildID: guild.id });
+  await Role.deleteOne({ guildID: guild.id });
   const doc = await Joindate.findOne({ guildID: guild.id });
   const days = joinPeriod(doc.createdAt);
   log(
