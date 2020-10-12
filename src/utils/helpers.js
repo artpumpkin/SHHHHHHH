@@ -1,6 +1,6 @@
 const path = require('path');
 const moment = require('moment');
-const { MessageEmbed } = require('discord.js');
+const { MessageEmbed, Permissions } = require('discord.js');
 const { createCanvas, loadImage } = require('canvas');
 
 const joinPeriod = (createdAt) => {
@@ -125,6 +125,7 @@ const addS = (count) => (count === 1 ? '' : 's');
 
 const getUserIDs = (args) => [...new Set(args.join` `.match(/\d+/g))];
 
+const isAdmin = (member) => member.hasPermission(Permissions.FLAGS.ADMINISTRATOR);
 module.exports = {
   joinPeriod,
   parseUptime,
@@ -138,4 +139,5 @@ module.exports = {
   findAsync,
   addS,
   getUserIDs,
+  isAdmin,
 };
