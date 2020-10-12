@@ -1,4 +1,4 @@
-const { embedMessage, addS } = require('../../utils/helpers');
+const { embedMessage, addS, getUserIDs } = require('../../utils/helpers');
 const Grant = require('../../models/grant');
 
 module.exports = {
@@ -31,24 +31,31 @@ module.exports = {
       const command = message.client.getCommand(commandName);
 
       if (command) {
-        const mentionedMembers = await Promise.all(
-          message.mentions.members.map(async (member) => {
-            await Grant.updateOne(
-              { userID: member.id },
-              {
-                userID: member.id,
-                $addToSet: {
-                  commands: command.name,
-                },
-              },
-              { upsert: true },
-            );
-            return {
-              userID: member.id,
-              name: `\`${member.nickname || member.user.username}\``,
-            };
-          }),
-        );
+        const mentionedMembers = (
+          await Promise.all(
+            getUserIDs(args).map(async (userID) => {
+              try {
+                const user = await message.client.users.fetch(userID);
+                await Grant.updateOne(
+                  { userID },
+                  {
+                    userID,
+                    $addToSet: {
+                      commands: command.name,
+                    },
+                  },
+                  { upsert: true },
+                );
+                return {
+                  userID,
+                  name: `\`${user.username}\` (\`${user.id}\`)`,
+                };
+              } catch (e) {
+                return null;
+              }
+            }),
+          )
+        ).filter((e) => e !== null);
 
         if (mentionedMembers.length === 0) {
           messageEmbed.setDescription('> No mentioned members to grant.\n⠀');
