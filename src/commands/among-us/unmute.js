@@ -1,22 +1,26 @@
-const { embedMessage, addS } = require('../../utils/helpers');
+const { embedMessage, addS, canUseCommand } = require('../../utils/helpers');
 
 module.exports = {
   name: 'unmute',
   aliases: ['u'],
   cooldown: 3,
   usage: 'unmute [[user] ...]',
-  examples: [
-    'unmute',
-    'unmute @user1',
-    'unmute @user1 @user2 @user3',
-  ],
+  examples: ['unmute', 'unmute @user1', 'unmute @user1 @user2 @user3'],
   description: 'Unmute all users or a specific user(s) in a certain channel.',
   guildOnly: true,
   async execute(message, prefix, args) {
+    if (!(await canUseCommand(message))) {
+      return message.channel.send(
+        `> You don't have the required roles to use this command.\n> Use \`${prefix}role\``,
+      );
+    }
+
     const messageEmbed = embedMessage(message);
 
     if (!message.member.voice.channel) {
-      messageEmbed.setDescription('> Please join a voice channel to use this command.\n⠀');
+      messageEmbed.setDescription(
+        '> Please join a voice channel to use this command.\n⠀',
+      );
     } else if (args.length === 0) {
       messageEmbed.setDescription(
         `> All members of \`${message.member.voice.channel.name}\` channel have been unmuted.\n⠀`,
