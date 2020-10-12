@@ -123,6 +123,8 @@ const findAsync = async (elements, callback) => {
 
 const addS = (count) => (count === 1 ? '' : 's');
 
+const getUserIDs = (args) => [...new Set(args.join` `.match(/\d+/g))];
+
 module.exports = {
   joinPeriod,
   parseUptime,
@@ -135,4 +137,5 @@ module.exports = {
   log,
   findAsync,
   addS,
+  getUserIDs,
 };
