@@ -6,9 +6,7 @@ module.exports = {
   aliases: ['r', 'report'],
   cooldown: 3,
   usage: 'report [bug or issue]',
-  examples: [
-    'report when I use the mute command it doesn\'t work',
-  ],
+  examples: ["report when I use the mute command it doesn't work"],
   description: 'Send a report to the developer.',
   async execute(message, prefix, args) {
     const messageEmbed = embedMessage(message);
@@ -29,7 +27,7 @@ module.exports = {
           message.author.avatarURL(),
         )
         .setDescription(`> ${args.join` `}\n⠀`)
-        .addField('👤 User', `<@${message.author.id}>`, true)
+        .addField('👤 User', `\`${message.author.username}\``, true)
         .addField('🆔 User ID', `\`${message.author.id}\``, true)
         .addField('🏠 Guild', `\`${message.guild.name}\``, true)
         .addField('🆔 Guild ID', `\`${message.guild.id}\`\n⠀`, true)
