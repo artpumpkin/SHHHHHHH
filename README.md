@@ -69,6 +69,9 @@
 | NAME     | DESCRIPTION                        | ALIASES       |  CD  | USAGE             | EXAMPLES                                 |  GO  |  R   |
 | -------- | ---------------------------------- | ------------- | :--: | ----------------- | ---------------------------------------- | :--: | :--: |
 | `prefix` | Show or change the bot's prefix. | `p`<br />`pf` |  3   | `prefix [prefix]` | `prefix`<br />`prefix !`<br />`prefix _` |  ✔️   |  ❌   |
+| `roles` | Show all added roles. | `role` | 3 | `roles` | `roles` | ✔️ | ❌ |
+| `addrole` | Limit the bot to a specific role *(3 is the roles limit)*. | `add` | 3 | `addrole [role(s)]` | `addrole @staff`<br />`addrole @helper @crew` | ✔️ | ❌ |
+| `removerole` | Remove a specific role limitation. | `remove` | 3 | `removerole [role(s)]` | `removerole @staff`<br />`removerole @helper @crew` | ✔️ | ❌ |
 
 
 
