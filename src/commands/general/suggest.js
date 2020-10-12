@@ -29,7 +29,7 @@ module.exports = {
           message.author.avatarURL(),
         )
         .setDescription(`> ${args.join` `}\n⠀`)
-        .addField('👤 User', `<@${message.author.id}>`, true)
+        .addField('👤 User', `\`${message.author.username}\``, true)
         .addField('🆔 User ID', `\`${message.author.id}\``, true)
         .addField('🏠 Guild', `\`${message.guild.name}\``, true)
         .addField('🆔 Guild ID', `\`${message.guild.id}\`\n⠀`, true)
