@@ -1,4 +1,4 @@
-const { embedMessage, addS } = require('../../utils/helpers');
+const { embedMessage, addS, canUseCommand } = require('../../utils/helpers');
 
 module.exports = {
   name: 'mute',
@@ -9,6 +9,12 @@ module.exports = {
   description: 'Mute all users or a specific user(s) in a certain channel.',
   guildOnly: true,
   async execute(message, prefix, args) {
+    if (!(await canUseCommand(message))) {
+      return message.channel.send(
+        `> You don't have the required roles to use this command.\n> Use \`${prefix}role\``,
+      );
+    }
+
     const messageEmbed = embedMessage(message);
 
     if (!message.member.voice.channel) {
