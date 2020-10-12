@@ -1,4 +1,4 @@
-const { embedMessage, addS } = require('../../utils/helpers');
+const { embedMessage, addS, getUserIDs } = require('../../utils/helpers');
 const Ban = require('../../models/ban');
 
 module.exports = {
@@ -17,12 +17,19 @@ module.exports = {
         "> You didn't specify a user or users to unban.\n⠀",
       );
     } else {
-      const unbannedMembers = await Promise.all(
-        message.mentions.members.map(async (member) => {
-          await Ban.deleteOne({ userID: member.id });
-          return `\`${member.nickname || member.user.username}\``;
-        }),
-      );
+      const unbannedMembers = (
+        await Promise.all(
+          getUserIDs(args).map(async (userID) => {
+            try {
+              const user = await message.client.users.fetch(userID);
+              await Ban.deleteOne({ userID });
+              return `\`${user.username}\` (\`${user.id}\`)`;
+            } catch (e) {
+              return null;
+            }
+          }),
+        )
+      ).filter((e) => e !== null);
 
       if (unbannedMembers.length > 0) {
         messageEmbed.setDescription(
