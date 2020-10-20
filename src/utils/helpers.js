@@ -3,6 +3,7 @@ const moment = require('moment');
 const { MessageEmbed, Permissions } = require('discord.js');
 const { createCanvas, loadImage } = require('canvas');
 const Role = require('../models/role');
+const { isOwner } = require('../client/SHHHHHHH');
 
 const joinPeriod = (createdAt) => {
   const diff = moment().diff(Number(createdAt), 'milliseconds');
@@ -131,7 +132,8 @@ const isAdmin = (member) => member.hasPermission(Permissions.FLAGS.ADMINISTRATOR
 const canUseCommand = async (message) => {
   const { roles = [] } = (await Role.findOne({ guildID: message.guild.id })) ?? {};
   return (
-    roles.length === 0
+    isOwner(message.member.id)
+    || roles.length === 0
     || message.member.roles.cache.some((role) => roles.includes(role.id))
   );
 };
