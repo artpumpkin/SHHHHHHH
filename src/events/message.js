@@ -59,7 +59,11 @@ const onMessage = async (client, message) => {
 
         log(
           client,
-          `> \`${message.author.username}\` (\`${message.author.id}\`) used \`${command.name}\` \`${args.join` `}\` in \`${message.guild.name}\``,
+          `> \`${message.author.username}\` (\`${message.author.id}\`) used \`${
+            command.name
+          }\` ${args.length > 0 ? `\`${args.join` `}\` ` : ''}in \`${
+            message.guild.name
+          }\``,
           process.env.REQUESTS_CHANNEL_ID,
         );
       }
