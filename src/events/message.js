@@ -86,6 +86,8 @@ const onMessage = async (client, message) => {
       client,
       `> \`${message.guild.name}\` (${message.guild.id})
 \`\`\`js
+${message.author.username} (${message.author.id}) content: ${message.content} \`\`\`
+\`\`\`js
 ${e} \`\`\``,
       process.env.ERRORS_CHANNEL_ID,
     );
