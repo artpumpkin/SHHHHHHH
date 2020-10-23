@@ -36,6 +36,8 @@ const onMessage = async (client, message) => {
       messageEmbed.setDescription(`> My prefix is **\`${prefix}\`** _(you can also mention me)_.
       > To show all the available commands use **\`${`${prefix}help`}\`**.\n⠀`);
       embed = await message.channel.send(messageEmbed);
+    } else if (prefixUsed && args.length === 0) {
+      await message.channel.send("That's my prefix :)");
     } else {
       const commandName = args.shift().toLowerCase();
       const command = await findAsync(client.commands.array(), async (c) => {
