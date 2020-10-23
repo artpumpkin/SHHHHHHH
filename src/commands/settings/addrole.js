@@ -1,4 +1,9 @@
-const { embedMessage, addS, isAdmin } = require('../../utils/helpers');
+const {
+  embedMessage,
+  addS,
+  isAdmin,
+  cleanDeletedRoles,
+} = require('../../utils/helpers');
 const Role = require('../../models/role');
 const { NUMBER_OF_ROLES_PER_GUILD } = require('../../utils/constants');
 
@@ -12,6 +17,8 @@ module.exports = {
   guildOnly: true,
   async execute(message, prefix, args) {
     const messageEmbed = embedMessage(message);
+
+    await cleanDeletedRoles(message.guild);
 
     if (!isAdmin(message.member)) {
       messageEmbed.setDescription(

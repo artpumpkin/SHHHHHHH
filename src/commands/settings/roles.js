@@ -1,4 +1,4 @@
-const { embedMessage, addS } = require('../../utils/helpers');
+const { embedMessage, addS, cleanDeletedRoles } = require('../../utils/helpers');
 const Role = require('../../models/role');
 
 module.exports = {
@@ -12,6 +12,8 @@ module.exports = {
   async execute(message) {
     const messageEmbed = embedMessage(message);
 
+    await cleanDeletedRoles(message.guild);
+
     const roles = (await Role.findOne({ guildID: message.guild.id }))?.roles || [];
 
     if (roles.length > 0) {
@@ -21,6 +23,7 @@ module.exports = {
           return `\`${role.name}\``;
         }),
       );
+
       messageEmbed.setDescription(
         `> Required role${addS(roles.length)} for this guild ${
           roles.length === 1 ? 'is' : 'are'
