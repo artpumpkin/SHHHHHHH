@@ -1,7 +1,7 @@
 const { Permissions, MessageEmbed } = require('discord.js');
 const { DEFAULT_PREFIX } = require('../utils/constants');
-const Joindate = require('../models/joindate');
-const { log } = require('../utils/helpers');
+const { Joindate } = require('../models');
+const { log } = require('../utils');
 
 const onGuildCreate = async (client, guild) => {
   const channel = guild.systemChannel

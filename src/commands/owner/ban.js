@@ -1,5 +1,5 @@
-const { embedMessage, addS, getUserIDs } = require('../../utils/helpers');
-const Ban = require('../../models/ban');
+const { embedMessage, addS, getUserIDs } = require('../../utils');
+const { Ban } = require('../../models');
 
 module.exports = {
   name: 'ban',

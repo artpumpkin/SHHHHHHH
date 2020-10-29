@@ -1,10 +1,10 @@
 const path = require('path');
-const SHHHHHHH = require('./client/SHHHHHHH');
+const SHHHHHHH = require('./client');
 
 require('dotenv').config({
   path: path.resolve(__dirname, `../.env.${process.env.NODE_ENV}`),
 });
-require('./db/mongoose');
+require('./db');
 
 const client = new SHHHHHHH();
 

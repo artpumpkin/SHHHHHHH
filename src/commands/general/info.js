@@ -1,4 +1,4 @@
-const { embedMessage, parseUptime } = require('../../utils/helpers');
+const { embedMessage, parseUptime } = require('../../utils');
 
 module.exports = {
   name: 'info',

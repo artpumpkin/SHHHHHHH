@@ -1,4 +1,4 @@
-const { embedMessage, addS, canUseCommand } = require('../../utils/helpers');
+const { embedMessage, addS, canUseCommand } = require('../../utils');
 
 module.exports = {
   name: 'unmute',

@@ -3,8 +3,8 @@ const {
   addS,
   isAdmin,
   cleanDeletedRoles,
-} = require('../../utils/helpers');
-const Role = require('../../models/role');
+} = require('../../utils');
+const { Role } = require('../../models');
 const { NUMBER_OF_ROLES_PER_GUILD } = require('../../utils/constants');
 
 module.exports = {

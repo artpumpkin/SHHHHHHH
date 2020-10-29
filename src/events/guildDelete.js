@@ -1,7 +1,5 @@
-const Prefix = require('../models/prefix');
-const Joindate = require('../models/joindate');
-const Role = require('../models/role');
-const { log, joinPeriod, addS } = require('../utils/helpers');
+const { Prefix, Joindate, Role } = require('../models');
+const { log, joinPeriod, addS } = require('../utils');
 
 const onGuildDelete = async (client, guild) => {
   await Prefix.deleteOne({ guildID: guild.id });

@@ -1,5 +1,5 @@
 const path = require('path');
-const { embedMessage } = require('../../utils/helpers');
+const { embedMessage } = require('../../utils');
 
 module.exports = {
   name: 'reload',

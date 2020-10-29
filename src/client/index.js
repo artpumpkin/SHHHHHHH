@@ -1,9 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { Client, Collection } = require('discord.js');
-const Prefix = require('../models/prefix');
-const Grant = require('../models/grant');
-const Ban = require('../models/ban');
+const { Prefix, Grant, Ban } = require('../models');
 const { DEFAULT_PREFIX } = require('../utils/constants');
 
 class SHHHHHHH extends Client {

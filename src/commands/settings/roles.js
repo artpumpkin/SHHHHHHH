@@ -1,5 +1,5 @@
-const { embedMessage, addS, cleanDeletedRoles } = require('../../utils/helpers');
-const Role = require('../../models/role');
+const { embedMessage, addS, cleanDeletedRoles } = require('../../utils');
+const { Role } = require('../../models');
 
 module.exports = {
   name: 'roles',

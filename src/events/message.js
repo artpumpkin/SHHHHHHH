@@ -3,7 +3,7 @@ const {
   isCooleddown,
   findAsync,
   log,
-} = require('../utils/helpers');
+} = require('../utils');
 const {
   isBanned,
   getPrefix,
@@ -11,7 +11,7 @@ const {
   isPrefixUsed,
   isOwner,
   isGranted,
-} = require('../client/SHHHHHHH');
+} = require('../client');
 
 const onMessage = async (client, message) => {
   try {

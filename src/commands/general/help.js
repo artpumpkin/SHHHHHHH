@@ -1,6 +1,6 @@
-const { embedMessage, title, allCaps } = require('../../utils/helpers');
+const { embedMessage, title, allCaps } = require('../../utils');
 const { EMOJIS } = require('../../utils/constants');
-const { isOwner, isGranted } = require('../../client/SHHHHHHH');
+const { isOwner, isGranted } = require('../../client');
 
 module.exports = {
   name: 'help',

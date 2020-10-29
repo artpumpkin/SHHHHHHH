@@ -1,5 +1,5 @@
 const { MessageEmbed } = require('discord.js');
-const { embedMessage } = require('../../utils/helpers');
+const { embedMessage } = require('../../utils');
 
 module.exports = {
   name: 'suggest',

@@ -1,5 +1,5 @@
-const Prefix = require('../../models/prefix');
-const { embedMessage } = require('../../utils/helpers');
+const { Prefix } = require('../../models');
+const { embedMessage } = require('../../utils');
 
 module.exports = {
   name: 'prefix',

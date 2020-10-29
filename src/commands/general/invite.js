@@ -1,4 +1,4 @@
-const { embedMessage } = require('../../utils/helpers');
+const { embedMessage } = require('../../utils');
 
 module.exports = {
   name: 'invite',

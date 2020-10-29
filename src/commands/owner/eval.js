@@ -1,4 +1,4 @@
-const { embedMessage } = require('../../utils/helpers');
+const { embedMessage } = require('../../utils');
 
 module.exports = {
   name: 'eval',
@@ -19,6 +19,7 @@ module.exports = {
       const expression = args.join` `;
       let result = null;
       try {
+        // eslint-disable-next-line no-eval
         result = eval(expression);
       } catch (e) {
         result = e;

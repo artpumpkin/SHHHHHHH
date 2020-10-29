@@ -1,6 +1,6 @@
 const { URL, URLSearchParams } = require('url');
 const fetch = require('node-fetch');
-const { random } = require('../../utils/helpers');
+const { random } = require('../../utils');
 
 module.exports = {
   name: 'gif',

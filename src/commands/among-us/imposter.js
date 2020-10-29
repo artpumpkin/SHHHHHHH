@@ -3,7 +3,7 @@ const {
   embedMessage,
   random,
   createImposterImage,
-} = require('../../utils/helpers');
+} = require('../../utils');
 
 module.exports = {
   name: 'imposter',

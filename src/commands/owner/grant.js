@@ -1,5 +1,5 @@
-const { embedMessage, addS, getUserIDs } = require('../../utils/helpers');
-const Grant = require('../../models/grant');
+const { embedMessage, addS, getUserIDs } = require('../../utils');
+const { Grant } = require('../../models');
 
 module.exports = {
   name: 'grant',

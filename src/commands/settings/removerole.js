@@ -3,8 +3,8 @@ const {
   addS,
   isAdmin,
   cleanDeletedRoles,
-} = require('../../utils/helpers');
-const Role = require('../../models/role');
+} = require('../../utils');
+const { Role } = require('../../models');
 
 module.exports = {
   name: 'removerole',
