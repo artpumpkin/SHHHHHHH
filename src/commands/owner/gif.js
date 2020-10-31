@@ -11,6 +11,11 @@ module.exports = {
   description: 'Generate random gifs.',
   restricted: true,
   async execute(message, prefix, args) {
+    if (args.length === 0) {
+      return message.channel.send(
+        `No specified query to search for. \`${prefix}gif [search]\``,
+      );
+    }
     const url = new URL('https://api.giphy.com/v1/gifs/search');
     url.search = new URLSearchParams({
       api_key: process.env.GIPHY_API_KEY,
