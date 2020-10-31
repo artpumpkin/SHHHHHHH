@@ -3,6 +3,7 @@ const {
   embedMessage,
   random,
   createImposterImage,
+  getUserIDs,
 } = require('../../utils');
 
 module.exports = {
@@ -14,25 +15,24 @@ module.exports = {
   description:
     'Guesses the imposter from a voice channel or a group of mentioned users.',
   guildOnly: true,
-  async execute(message) {
+  async execute(message, prefix, args) {
     const messageEmbed = embedMessage(message);
-    const { members } = message.mentions;
+    let ids = getUserIDs(args);
     const { channel } = message.member.voice;
 
-    if (members.size !== 0 || channel) {
-      let member = null;
-      const mapCallback = (m) => ({
-        name: m.nickname ?? m.user.username,
-        mention: `<@${m.id}>`,
-      });
-
-      let mentionedMembers = null;
-      if (members.size !== 0) {
-        mentionedMembers = members.map(mapCallback);
-      } else if (channel) {
-        mentionedMembers = channel.members.map(mapCallback);
+    if (ids.length !== 0 || channel) {
+      if (ids.length === 0) {
+        ids = channel.members.map((m) => m.id);
       }
-      member = mentionedMembers[random(mentionedMembers.length)];
+
+      const cachedMember = message.guild.members.cache.get(
+        ids[random(ids.length)],
+      );
+
+      const member = {
+        name: cachedMember.nickname ?? cachedMember.user.username,
+        mention: `<@${cachedMember.id}>`,
+      };
 
       const attachment = new MessageAttachment(
         await createImposterImage(`${member.name}`),
