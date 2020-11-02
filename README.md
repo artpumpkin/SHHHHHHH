@@ -11,7 +11,13 @@
   <a href="https://www.patreon.com/shhhhhhh">
     <img src="https://img.shields.io/badge/Patreon-grey?style=flat-square&logo=patreon" />
   </a>
+  <p align="center">
+    <a href="https://top.gg/bot/761297770429939742">
+      <img src="https://top.gg/api/widget/761297770429939742.svg" alt="SHHHHHHH!" />
+    </a>
+  </p>
 </p>
+
 
 > SHHHHHHH! was created especially to shush people while playing Among Us! A simple and easy to use Discord bot to mute and unmute people while playing!
 
