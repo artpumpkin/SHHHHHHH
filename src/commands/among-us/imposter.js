@@ -29,19 +29,21 @@ module.exports = {
         ids[random(ids.length)],
       );
 
-      const member = {
-        name: cachedMember.nickname ?? cachedMember.user.username,
-        mention: `<@${cachedMember.id}>`,
-      };
+      if (cachedMember) {
+        const member = {
+          name: cachedMember.nickname ?? cachedMember.user.username,
+          mention: `<@${cachedMember.id}>`,
+        };
 
-      const attachment = new MessageAttachment(
-        await createImposterImage(`${member.name}`),
-        'welcome-image.png',
-      );
-      return message.channel.send(
-        `I think ${member.mention} is \`${random(101)}%\` imposter!`,
-        attachment,
-      );
+        const attachment = new MessageAttachment(
+          await createImposterImage(`${member.name}`),
+          'welcome-image.png',
+        );
+        return message.channel.send(
+          `I think ${member.mention} is \`${random(101)}%\` imposter!`,
+          attachment,
+        );
+      }
     }
     messageEmbed.setDescription(
       '> Please mention some users or join a voice channel to guess the imposter.\n⠀',
